@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #fdfdfd;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    background-color: #d4c28c81;
+    min-height: 160vh;
+    width: 100%;
+    position: relative;
+}
+
+.nav {
+    min-height: 11vh;
+    width: 100%;
+    background-color: #ffc824;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.nav2 {
+    display: flex;
+    gap: 2vh;
+}
+.nav h1 {
+    font-size: 5vh;
+}
+h1, h3 {
+    color: #362b0b;
+    text-shadow: 0px 0px 10px #785f1c;
+}
+h3 {
+    padding: 0.5vw;
+    border: 2px solid #362b0b;
+    border-radius: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.anime h1 {
+    display: inline-block;
+    font-size: 10vh;
+}
+.anime .dot {
+    display: inline-block;
+    margin: 1.2vh;
+}
+
+.dot {
+    height: 5vh;
+    width: 5vh;
+    background-color:#ffc824;
+    border: 5px solid #f0d279;
+    border-radius: 50%;
+}
+
+.anime {
+    white-space: nowrap;
+    display: inline-block;
+}
+.animex::-webkit-scrollbar{
+    display: none;
+}
+.animex{
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+@keyframes move {
+    from {
+        transform: translateX(0%)
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.main2 {
+    margin-top: 10vh;
+}
+.main {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+.card img {
+    width: 25vw;
+    height: 35vh;
+    border-radius: 20px;
+    border: 5px solid #ffc824;
+}
+
+.card {
+    height: 35vh;
+    width: 25vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    width: 25vw;
+    height: 35vh;
+    border-radius: 20px;
+    background-color: #0e0a1db2;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.3s;
+}
+
+.card:hover::after{
+    bottom: 0;
+}
+
+
+
+.cloud{
+    height: 10vh;
+    width: 100%;
+    /* background-color: #0e0a1d; */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.cld1{
+    height:15vh ;
+    width: 70%;
+    background-color: #ffc824;
+    position: absolute;
+    left: -10%;
+    filter: blur(20px);
+    border-radius: 10px
+}
+.cld2{
+    height:15vh ;
+    width: 70%;
+    background-color: #ffc824;
+    position: absolute;
+    right: -10%;
+    filter: blur(20px);
+    border-radius: 10px;
+}
+.cloud h1 {
+    z-index: 3;
+    /* position: absolute; */
+    bottom: 5vh;
+    font-size: 3vh;
+    margin: 7vh auto;
+}
+
+.animex h1 {
+    text-align: center;
+    font-size: 7vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (orientation:portrait) {
+    .wrapper {
+        height:290vh;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 2vw;
+        height: 5vh;
+    }
+    .nav h1 {
+        font-size: 5vh;
+    }
+    .nav2 {
+        display: none;
+    }
+    .animex h1 {
+        font-size: 5vh;
+    }
+    h3 {
+        margin-top: 3vw;
+        padding: 1vw;
+        border: 0px solid #ffc82481;
+        border-radius: 0;
+    }
+    .anime h1 {
+        display: inline-block;
+        font-size: 3vh;
+    }
+    .anime .dot {
+        display: inline-block;
+        margin: 0.5vh 2vh;
+    }
+    .dot {
+        height: 3vh;
+        width: 3vh;
+    }
+    .card {
+        height: 30vh;
+        width: 85vw;
+    }
+    .box h1 {
+        font-size: 3.2vh;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        width: 100%;
+        height: 115vh;
+    }
+    .box {
+        gap: 1vh;
+        margin-bottom: 3vh;
+    }
+    .card img {
+        height: 30vh;
+        width: 85vw;
+    }
+    .card::after{
+        height: 30vh;
+        width: 85vw;
+    }
+    .boxx {
+        margin-bottom: 25vh;
+    }
+
+}
