@@ -7,9 +7,10 @@ table{
   width: 2vw;
   text-align: center;
   background-color: #d4c28c81;
-  border-radius: 5px;
+  border-radius: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-left: 10px;
+  width: 90%;
 }
 
 
