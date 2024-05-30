@@ -13,8 +13,6 @@
 
 <body id="body" onload="call_add_row()">
   
-<!-- ----------------------------------Javscript------------------------------------------------ -->
-
   <script>
 
     function delete_last_row(){
@@ -131,9 +129,9 @@
               y: {
                   title: {
                       display: true,
-                      text: 'Conductance' // Name of y-axis
+                      text: 'Conductance'
                   },
-                  beginAtZero: true // Optional
+                  beginAtZero: true 
 
               }
             },
@@ -154,11 +152,6 @@
       });
     }
   </script>
-  <!-- <script src="images/abc.js"></script> -->
-
-
-<!-- ------------------------------------------HTML------------------------------------------------------- -->
-
 
   <header>
     <div class="header">
@@ -169,30 +162,30 @@
   <main>
     <div class="row">
       <div class="column">
-        <div id="dec"><h2>Conductometry</h2>
-        <p>Conductometry is a technique that measures the electrolytic conductivity of a solution to monitor chemical reactions. It's a common detection mode in analytical chemistry, where conductometric titration is a standard technique.</p></div>
-        <h3>To Calculate Conductometry: </h3>
+        <div id="dec"><h2 style="text-align: center;">Conductometry Graph Plotter</h2>
+        <p>Conductometry is a technique that measures how well a solution can conduct electricity, which helps track chemical reactions. It's widely used in analytical chemistry, especially in conductometric titrations, a common method for detecting various substances.</p></div>
+        <h3>Enter the Readings Here: </h3>
 
           <table style="width:50%;text-align:left;" cellpadding="8" cellspacing="7">
             <tr>
-              <td>Enter the value of concentration of NaOH in Normality:</td>
-              <td><input type="number" id="con1" name="con1" value="0.5"></td>
+              <td>Concentration of NaOH (in Normality):</td>
+              <td><input type="number" id="con1" name="con1" value="0"></td>
             </tr>
             <tr>
               <td>
-                Enter the value of concentration of Acidic Mixture in Normality:
+                Concentration of Acidic Mixture (in Normality):
               </td>
               <td>
-                <input type="number" id="con2" name="con2" value="0.5">
+                <input type="number" id="con2" name="con2" value="0">
               </td>
             </tr>
             <tr>
-              <td> Enter the value of total Volume of NaOH to be added in ml: </td>
+              <td>Total Volume of NaOH to be added (in ml): </td>
               <td><input type="number" id="vol1" name="vol1" value="0"  oninput="call_add_row()"></td>
             </tr>
             <tr>
               <td>
-                Enter the value of total Volume of Acidic Mixture to be added in ml:
+                Total Volume of Acidic Mixture to be added (in ml):
               </td>
               <td>
                 <input type="number" id="vol2" name="vol2" value="10.0">
@@ -200,7 +193,7 @@
             </tr>
             <tr>
               <td>
-                Enter rate of NaOH to be added in ml:
+                Rate of NaOH to be added (in ml):
               </td>
               <td>
                 <input type="number" id="rate" name="rate" value="0.2" min = "0.1" max="1000" onblur="check_rate()">
@@ -222,19 +215,18 @@
           </table>
 
           <br><br><br>
-          <label for="enter"> Enter: </label>
           <table cellpadding="5px" cellspacing="10px" id="dataInput">
-            <tr><td>Volume</td><td>Conductance</td></tr>
+            <tr><td>Enter Volume</td><td>Enter Conductance</td></tr>
           </table>
           <br><br>
-          <button onclick="add_row()" title="Add Row"> + </button>
-          <button onclick="delete_last_row()" title="Delete Row"> - </button>
-          <button type="submit" onclick="checkvalues()">Generate Graph</button>
+          <button onclick="add_row()" title="Add Row"> Add Reading </button>
+          <button onclick="delete_last_row()" title="Delete Row"> Remove Reading </button>
+          <button type="submit" onclick="checkvalues()">Plot</button>
           <canvas id="myChart"></canvas>
           <br><br>
 
         <br><br>
-        <button onclick="location.reload()" id="reset" hidden> Refresh </button>
+        <button onclick="location.reload()" id="reset" hidden> Refresh Graph</button>
       </div>
     </div>
   </main>
